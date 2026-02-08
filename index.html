@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaa Frimpomaa Boateng | Global Program Leader</title>
+    <meta name="description" content="Global Program Leader specializing in nonprofit program management, international development, and data-driven impact measurement.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Color Palette */
+            --primary-teal: #006B7D;
+            --deep-teal: #004D5C;
+            --accent-terracotta: #D4795B;
+            --soft-coral: #E8A896;
+            --cream: #F8F6F3;
+            --warm-gray: #E5E2DD;
+            --charcoal: #2C2C2C;
+            --light-text: #5A5A5A;
+            
+            /* Typography */
+            --font-display: 'Cormorant Garamond', serif;
+            --font-body: 'DM Sans', sans-serif;
+            
+            /* Spacing */
+            --section-padding: clamp(4rem, 10vw, 8rem);
+            --container-max: 1200px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--charcoal);
+            background: var(--cream);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(248, 246, 243, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid rgba(0, 107, 125, 0.1);
+        }
+        
+        nav .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-teal);
+            letter-spacing: 0.5px;
+        }
+        
+        nav ul {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        nav a {
+            color: var(--charcoal);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: var(--primary-teal);
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-teal);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--warm-gray) 100%);
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(0, 107, 125, 0.08) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-30px, -30px) rotate(5deg); }
+        }
+        
+        .hero .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-label {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            background: rgba(0, 107, 125, 0.1);
+            color: var(--primary-teal);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 50px;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--charcoal);
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .hero-subtitle {
+            font-family: var(--font-display);
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            color: var(--primary-teal);
+            margin-bottom: 2rem;
+            font-weight: 400;
+            font-style: italic;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--light-text);
+            margin-bottom: 3rem;
+            max-width: 650px;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 4px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary {
+            background: var(--primary-teal);
+            color: white;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--deep-teal);
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+        
+        .btn-primary:hover::before {
+            left: 0;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-teal);
+            border: 2px solid var(--primary-teal);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-teal);
+            color: white;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: var(--section-padding) 2rem;
+        }
+        
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-terracotta);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+        }
+        
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Impact Dashboard */
+        .impact-dashboard {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            margin-bottom: 3rem;
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .metric-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--cream) 0%, white 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-teal), var(--accent-terracotta));
+        }
+        
+        .metric-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-teal);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .metric-label {
+            font-size: 0.95rem;
+            color: var(--light-text);
+            font-weight: 500;
+        }
+        
+        .metric-context {
+            font-size: 0.85rem;
+            color: var(--accent-terracotta);
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+        
+        /* Visual Data Representation */
+        .data-viz {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .viz-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-bars {
+            display: grid;
+            gap: 1.5rem;
+        }
+        
+        .skill-item {
+            position: relative;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--charcoal);
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background: var(--warm-gray);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-teal), var(--accent-terracotta));
+            border-radius: 10px;
+            transition: width 1s ease-out;
+        }
+        
+        /* Featured Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0, 107, 125, 0.15);
+        }
+        
+        .project-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--deep-teal) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+        }
+        
+        .project-org {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .project-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-body {
+            padding: 2rem;
+        }
+        
+        .project-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-section-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-terracotta);
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-section-content {
+            color: var(--light-text);
+            font-size: 0.95rem;
+        }
+        
+        .project-impact {
+            background: var(--cream);
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--primary-teal);
+        }
+        
+        .project-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-tag {
+            padding: 0.4rem 0.8rem;
+            background: var(--warm-gray);
+            color: var(--charcoal);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        /* Core Competencies */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .competency-card {
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-teal);
+        }
+        
+        .competency-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 107, 125, 0.12);
+        }
+        
+        .competency-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-teal), var(--accent-terracotta));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .competency-title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+        }
+        
+        .competency-description {
+            color: var(--light-text);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--warm-gray);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            grid-column: 2;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-date {
+            grid-column: 1;
+            text-align: right;
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-teal);
+            border: 4px solid var(--cream);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+        }
+        
+        .timeline-role {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-org {
+            color: var(--primary-teal);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-achievements {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .timeline-achievements li {
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            color: var(--light-text);
+            font-size: 0.95rem;
+        }
+        
+        .timeline-achievements li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-terracotta);
+            font-weight: bold;
+        }
+        
+        .timeline-date {
+            font-weight: 600;
+            color: var(--accent-terracotta);
+            padding-top: 2rem;
+        }
+        
+        /* Education */
+        .education-grid {
+            display: grid;
+            gap: 2rem;
+        }
+        
+        .education-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .education-degree {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-school {
+            color: var(--primary-teal);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-honors {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .honor-badge {
+            padding: 0.4rem 1rem;
+            background: linear-gradient(135deg, var(--primary-teal), var(--deep-teal));
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .education-year {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: var(--accent-terracotta);
+        }
+        
+        /* Contact */
+        .contact {
+            background: linear-gradient(135deg, var(--deep-teal) 0%, var(--primary-teal) 100%);
+            color: white;
+        }
+        
+        .contact-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .contact-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-description {
+            font-size: 1.15rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-method {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .contact-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .contact-value a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            transition: border-color 0.3s ease;
+        }
+        
+        .contact-value a:hover {
+            border-color: white;
+        }
+        
+        .download-resume {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: white;
+            color: var(--primary-teal);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .download-resume:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--accent-terracotta);
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1rem;
+            }
+            
+            nav a {
+                font-size: 0.85rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                grid-template-columns: 1fr;
+                padding-left: 3rem;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content {
+                grid-column: 1;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-date {
+                grid-column: 1;
+                text-align: left;
+            }
+            
+            .timeline-marker {
+                left: 20px;
+            }
+            
+            .education-card {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">YFB</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label">Program Leadership</div>
+                <h1>Yaa Frimpomaa Boateng</h1>
+                <p class="hero-subtitle">Global Program Leader | Connecting Data, People & Impact</p>
+                <p>Driving measurable outcomes in international development through strategic stakeholder coordination, data-driven decision-making, and cross-cultural program management.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Dashboard -->
+    <section id="impact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Quantified Impact</div>
+                <h2 class="section-title">Measurable Results Across Continents</h2>
+                <p class="section-description">A track record of delivering strategic programs that scale, building communities that thrive, and transforming data into actionable insights.</p>
+            </div>
+            
+            <div class="impact-dashboard">
+                <div class="dashboard-grid">
+                    <div class="metric-card fade-in">
+                        <span class="metric-number">220+</span>
+                        <div class="metric-label">Public Health Leaders Engaged</div>
+                        <div class="metric-context">90% average attendance</div>
+                    </div>
+                    <div class="metric-card fade-in">
+                        <span class="metric-number">100+</span>
+                        <div class="metric-label">International Conference Attendees</div>
+                        <div class="metric-context">Coordinated across 3 countries</div>
+                    </div>
+                    <div class="metric-card fade-in">
+                        <span class="metric-number">75%</span>
+                        <div class="metric-label">Survey Response Rate</div>
+                        <div class="metric-context">Informing strategic decisions</div>
+                    </div>
+                    <div class="metric-card fade-in">
+                        <span class="metric-number">4</span>
+                        <div class="metric-label">Countries & Regions</div>
+                        <div class="metric-context">Ghana, US, Senegal, Denmark</div>
+                    </div>
+                </div>
+                
+                <div class="data-viz">
+                    <h3 class="viz-title">Core Capabilities</h3>
+                    <div class="skill-bars">
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Strategic Stakeholder Coordination</span>
+                                <span>Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%;" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Data Analytics & Visualization</span>
+                                <span>Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Program Strategy & Delivery</span>
+                                <span>Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 93%;" data-width="93"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Cross-Cultural Leadership</span>
+                                <span>Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%;" data-width="92"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Competencies -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">What I Bring</div>
+                <h2 class="section-title">Strategic Program Excellence</h2>
+            </div>
+            
+            <div class="competencies-grid">
+                <div class="competency-card fade-in">
+                    <div class="competency-icon">📊</div>
+                    <h3 class="competency-title">Data-Driven Impact Measurement</h3>
+                    <p class="competency-description">Leveraging STATA, R, Tableau, and Power BI to transform complex data into actionable insights that inform program strategy and demonstrate measurable outcomes to stakeholders.</p>
+                </div>
+                
+                <div class="competency-card fade-in">
+                    <div class="competency-icon">🌍</div>
+                    <h3 class="competency-title">Complex Stakeholder Coordination</h3>
+                    <p class="competency-description">Orchestrating multi-vendor operations, cross-functional teams, and international partnerships across public, private, and nonprofit sectors to deliver on ambitious program goals.</p>
+                </div>
+                
+                <div class="competency-card fade-in">
+                    <div class="competency-icon">🎯</div>
+                    <h3 class="competency-title">Strategic Program Delivery</h3>
+                    <p class="competency-description">Utilizing Agile and Scrum methodologies to lead end-to-end program implementation, from design through execution, ensuring on-time delivery within donor-mandated timelines.</p>
+                </div>
+                
+                <div class="competency-card fade-in">
+                    <div class="competency-icon">🤝</div>
+                    <h3 class="competency-title">Community Building at Scale</h3>
+                    <p class="competency-description">Creating and sustaining continent-wide communities of practice through strategic engagement, curated professional development, and data-informed programming that drives year-over-year growth.</p>
+                </div>
+                
+                <div class="competency-card fade-in">
+                    <div class="competency-icon">💡</div>
+                    <h3 class="competency-title">Cross-Cultural Leadership</h3>
+                    <p class="competency-description">Leading diverse, international teams with cultural intelligence developed through on-the-ground experience in Ghana, Denmark, Senegal, and the United States.</p>
+                </div>
+                
+                <div class="competency-card fade-in">
+                    <div class="competency-icon">📈</div>
+                    <h3 class="competency-title">Grant Strategy & Financial Management</h3>
+                    <p class="competency-description">Managing program budgets, procurement workflows, and grant cycles while ensuring financial compliance and maximizing resource utilization across multiple funding streams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Portfolio</div>
+                <h2 class="section-title">Strategic Programs That Scale</h2>
+                <p class="section-description">From UN donor mapping to climate-smart agriculture platforms, these initiatives showcase the intersection of data analytics, stakeholder coordination, and measurable impact.</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-org">University of Washington | International Program in Public Health Leadership</div>
+                        <h3 class="project-title">Building a Continent-Wide Community of Practice</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-section">
+                            <div class="project-section-title">The Challenge</div>
+                            <div class="project-section-content">Engage 220+ public health leaders across Africa in meaningful professional development while sustaining year-over-year growth and cross-cohort collaboration.</div>
+                        </div>
+                        <div class="project-section">
+                            <div class="project-section-title">Strategic Approach</div>
+                            <div class="project-section-content">Led end-to-end planning and delivery of hybrid programming, curated opportunities aligned with alumni needs, and established data feedback loops through bi-annual surveys achieving 75% response rates.</div>
+                        </div>
+                        <div class="project-section project-impact">
+                            <div class="project-section-title">Measurable Impact</div>
+                            <div class="project-section-content"><strong>90% average attendance</strong> across all events, with data-driven insights informing program strategy and donor grant-cycle decisions.</div>
+                        </div>
+                        <div class="project-skills">
+                            <span class="skill-tag">Stakeholder Engagement</span>
+                            <span class="skill-tag">Power BI</span>
+                            <span class="skill-tag">Survey Design</span>
+                            <span class="skill-tag">Community Building</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-org">University of Washington | International Program in Public Health Leadership</div>
+                        <h3 class="project-title">Multi-Country Conference Coordination</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-section">
+                            <div class="project-section-title">The Challenge</div>
+                            <div class="project-section-content">Coordinate vendor operations and service delivery for an international conference in Senegal for 100+ attendees, managing complex logistics across multiple countries.</div>
+                        </div>
+                        <div class="project-section">
+                            <div class="project-section-title">Strategic Approach</div>
+                            <div class="project-section-content">Established service level agreements for travel, hotel, and event materials through clear communication channels. Managed procurement workflows, timelines, and service delivery across multiple vendors in different regions.</div>
+                        </div>
+                        <div class="project-section project-impact">
+                            <div class="project-section-title">Measurable Impact</div>
+                            <div class="project-section-content">Delivered seamless conference experience for <strong>100+ international attendees</strong>, on time and within budget across 3 countries.</div>
+                        </div>
+                        <div class="project-skills">
+                            <span class="skill-tag">Vendor Coordination</span>
+                            <span class="skill-tag">Cross-Border Logistics</span>
+                            <span class="skill-tag">Procurement</span>
+                            <span class="skill-tag">Event Management</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-org">United Nations Resident Coordinator's Office | Ghana</div>
+                        <h3 class="project-title">Strategic Donor Network Mapping</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-section">
+                            <div class="project-section-title">The Challenge</div>
+                            <div class="project-section-content">Identify funding overlaps and redundancies across UN partnership programs to optimize resource allocation and reduce duplicative workstreams.</div>
+                        </div>
+                        <div class="project-section">
+                            <div class="project-section-title">Strategic Approach</div>
+                            <div class="project-section-content">Analyzed and mapped donor networks using SQL and Tableau to visualize funding flows, identify patterns, and surface actionable insights for leadership decision-making.</div>
+                        </div>
+                        <div class="project-section project-impact">
+                            <div class="project-section-title">Measurable Impact</div>
+                            <div class="project-section-content">Led to <strong>efficient resource utilization</strong> and reduction in redundant program workstreams across the UN and its partnership programs.</div>
+                        </div>
+                        <div class="project-skills">
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Tableau</span>
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Strategic Planning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <div class="project-header">
+                        <div class="project-org">Trailer Brain Ghana</div>
+                        <h3 class="project-title">Climate-Smart Agriculture Platform</h3>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-section">
+                            <div class="project-section-title">The Challenge</div>
+                            <div class="project-section-content">Deliver a sustainability-focused farmer onboarding platform offering climate-smart training programs to boost smallholder farmers' yields and strengthen multi-sector partnerships.</div>
+                        </div>
+                        <div class="project-section">
+                            <div class="project-section-title">Strategic Approach</div>
+                            <div class="project-section-content">Collaborated with engineering and design teams using Agile/Scrum methodologies. Led weekly syncs to ensure milestones were delivered within donor-mandated timelines. Developed cross-functional workflow in Asana with automated triggers.</div>
+                        </div>
+                        <div class="project-section project-impact">
+                            <div class="project-section-title">Measurable Impact</div>
+                            <div class="project-section-content">Achieved all <strong>financial and impact targets</strong> within donor timeline, improving farmer yields and program performance.</div>
+                        </div>
+                        <div class="project-skills">
+                            <span class="skill-tag">Agile/Scrum</span>
+                            <span class="skill-tag">Asana</span>
+                            <span class="skill-tag">Cross-functional Teams</span>
+                            <span class="skill-tag">Impact Strategy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" style="background: white;">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Career Journey</div>
+                <h2 class="section-title">Progressive Leadership Experience</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-role">Graduate Research Assistant</h3>
+                        <div class="timeline-org">Evans School of Public Policy & Governance - University of Washington</div>
+                        <ul class="timeline-achievements">
+                            <li>Conducting in-depth research on government regulation of NGOs across African nations using STATA and R</li>
+                            <li>Engineering data pipelines and establishing core metrics to assess policy impacts over five-year period</li>
+                            <li>Developing interactive Power BI and Tableau dashboards transforming complex data into actionable insights</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-date">June 2025 - Present</div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-role">Senior Program Assistant</h3>
+                        <div class="timeline-org">International Program in Public Health Leadership - University of Washington</div>
+                        <ul class="timeline-achievements">
+                            <li>Led end-to-end planning for 220+ public health leaders across Africa with 90% attendance</li>
+                            <li>Coordinated international conference in Senegal for 100+ attendees across multiple countries</li>
+                            <li>Achieved 75% survey response rates, analyzing results to inform donor grant-cycle decisions</li>
+                            <li>Built continent-wide community of practice driving year-over-year engagement growth</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-date">Oct 2024 - Present</div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-role">Program Manager</h3>
+                        <div class="timeline-org">Trailer Brain Ghana</div>
+                        <ul class="timeline-achievements">
+                            <li>Delivered sustainability-focused farmer-onboarding platform boosting smallholder farmers' yields</li>
+                            <li>Led weekly Agile/Scrum syncs ensuring milestones met donor-mandated timelines</li>
+                            <li>Developed cross-functional Asana workflow with automated triggers for farmer onboarding</li>
+                            <li>Strengthened financial planning and grant management while reducing operational risks</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-date">Jan 2023 - Aug 2024</div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-role">Program Associate, Partnerships & Development Finance</h3>
+                        <div class="timeline-org">United Nations Resident Coordinator's Office - Ghana</div>
+                        <ul class="timeline-achievements">
+                            <li>Mapped donor networks using SQL and Tableau, reducing redundant program workstreams</li>
+                            <li>Conducted comprehensive research to draft UN Sustainable Development Cooperation Framework</li>
+                            <li>Ensured strategy alignment with national legal and institutional frameworks</li>
+                            <li>Presented case studies and best practices for high-level stakeholder engagements</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-date">Sep 2021 - Jan 2023</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Academic Foundation</div>
+                <h2 class="section-title">Education & Recognition</h2>
+            </div>
+            
+            <div class="education-grid">
+                <div class="education-card fade-in">
+                    <div>
+                        <h3 class="education-degree">Master of Public Administration (Public Policy)</h3>
+                        <div class="education-school">Evans School of Public Policy & Governance - University of Washington</div>
+                        <div class="education-honors">
+                            <span class="honor-badge">Top Scholar Award Recipient 2024</span>
+                            <span class="honor-badge">GPA: 3.52</span>
+                        </div>
+                        <p style="margin-top: 1rem; color: var(--light-text); font-size: 0.95rem;">Relevant Coursework: Mediation & Negotiation, Financial Management and Budgeting, Managing Organizational Performance</p>
+                    </div>
+                    <div class="education-year">2026</div>
+                </div>
+                
+                <div class="education-card fade-in">
+                    <div>
+                        <h3 class="education-degree">BSc. Business Administration</h3>
+                        <div class="education-school">Kwame Nkrumah University of Science and Technology</div>
+                        <p style="margin-top: 1rem; color: var(--light-text); font-size: 0.95rem;">Relevant Coursework: Operations Management, Global Business Strategy, Microeconomics, Strategic Management & Policy</p>
+                    </div>
+                    <div class="education-year">2021</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 3rem;">
+                <h3 style="font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 2rem; text-align: center;">Honors & Leadership</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border-left: 3px solid var(--accent-terracotta);">
+                        <strong style="color: var(--primary-teal);">European Union Erasmus+ Scholar</strong>
+                        <p style="margin-top: 0.5rem; color: var(--light-text); font-size: 0.9rem;">International Student and Cultural Ambassador - Aalborg, Denmark</p>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border-left: 3px solid var(--accent-terracotta);">
+                        <strong style="color: var(--primary-teal);">Finalist & Best Speaker</strong>
+                        <p style="margin-top: 0.5rem; color: var(--light-text); font-size: 0.9rem;">African German Entrepreneurship Academy - Leipzig, Germany</p>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border-left: 3px solid var(--accent-terracotta);">
+                        <strong style="color: var(--primary-teal);">Vice President</strong>
+                        <p style="margin-top: 0.5rem; color: var(--light-text); font-size: 0.9rem;">Evans School International Students Association & KNUST International Business Class of 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="contact-title">Let's Connect</h2>
+                <p class="contact-description">I'm actively seeking program management opportunities where I can drive measurable impact through strategic coordination, data analytics, and cross-cultural leadership.</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value"><a href="mailto:yaafrimpomaaboateng@gmail.com">yaafrimpomaaboateng@gmail.com</a></div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value"><a href="tel:+12063702242">(206) 370-2242</a></div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">Seattle, WA</div>
+                    </div>
+                </div>
+                
+                <a href="#" class="download-resume" onclick="alert('Resume PDF download would be linked here'); return false;">Download Resume (PDF)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Yaa Frimpomaa Boateng. Designed to showcase strategic program leadership.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animation observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Animate skill bars on scroll
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progress = entry.target.querySelector('.skill-progress');
+                    const width = progress.getAttribute('data-width');
+                    progress.style.width = '0%';
+                    setTimeout(() => {
+                        progress.style.width = width + '%';
+                    }, 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-item').forEach(el => {
+            skillObserver.observe(el);
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollY = window.pageYOffset;
+
+            sections.forEach(section => {
+                const sectionHeight = section.offsetHeight;
+                const sectionTop = section.offsetTop - 100;
+                const sectionId = section.getAttribute('id');
+                const navLink = document.querySelector(`nav a[href="#${sectionId}"]`);
+
+                if (navLink && scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.style.color = 'var(--charcoal)';
+                    });
+                    navLink.style.color = 'var(--primary-teal)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
